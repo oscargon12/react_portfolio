@@ -1,0 +1,239 @@
+/* Margin */
+@for $i from 0 to 4 {
+  .m#{$i} {
+    margin: #{$i}rem;
+  }
+}
+
+@for $i from 0 to 4 {
+  .mt-#{$i} {
+    margin-top: #{$i}rem;
+  }
+}
+
+@for $i from 0 to 4 {
+  .mb-#{$i} {
+    margin-bottom: #{$i}rem;
+  }
+}
+
+@for $i from 0 to 4 {
+  .ml-#{$i} {
+    margin-left: #{$i}rem;
+  }
+}
+
+@for $i from 0 to 4 {
+  .mr-#{$i} {
+    margin-right: #{$i}rem;
+  }
+}
+
+@for $i from 0 to 4 {
+  .my-#{$i} {
+    margin-top: #{$i}rem;
+    margin-bottom: #{$i}rem;
+  }
+}
+
+@for $i from 0 to 4 {
+  .mx-#{$i} {
+    margin-right: #{$i}rem;
+    margin-left: #{$i}rem;
+  }
+}
+
+/* Padding */
+@for $i from 0 to 4 {
+  .p#{$i} {
+    padding: #{$i}rem;
+  }
+}
+
+@for $i from 0 to 4 {
+  .pt-#{$i} {
+    padding-top: #{$i}rem;
+  }
+}
+
+@for $i from 0 to 4 {
+  .pb-#{$i} {
+    padding-bottom: #{$i}rem;
+  }
+}
+
+@for $i from 0 to 4 {
+  .pl-#{$i} {
+    padding-left: #{$i}rem;
+  }
+}
+
+@for $i from 0 to 4 {
+  .pr-#{$i} {
+    padding-right: #{$i}rem;
+  }
+}
+
+@for $i from 0 to 4 {
+  .py-#{$i} {
+    padding-top: #{$i}rem;
+    padding-bottom: #{$i}rem;
+  }
+}
+
+@for $i from 0 to 4 {
+  .px-#{$i} {
+    padding-right: #{$i}rem;
+    padding-left: #{$i}rem;
+  }
+}
+
+/* Flexbox */
+.d-flex {
+  display: flex;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-end {
+  justify-content: end;
+}
+
+.d-bl-fl {
+  display: flex;
+}
+
+/* Grid */
+.row-1-1-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-rows: 1fr;
+  gap: 0.5rem;
+}
+
+.row-1-2-1 {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0.5rem;
+}
+
+.row-3-1 {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0.5rem;
+}
+
+.row-1-1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0.5rem;
+}
+
+.row-1x4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0.5rem;
+}
+
+.row-2-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0.5rem;
+}
+
+/* Font */
+.primary-font {
+  font-family: $primary-font;
+}
+
+
+
+.btn-font-sm {
+  font-size: 12px;
+}
+
+$font-weights: 300 400 500 600 700;
+@each $font in $font-weights {
+  .fw-#{$font} {
+    font-weight: $font;
+  }
+}
+
+.icon-xs {
+  font-size: 14px !important;
+}
+
+.vertical-middle {
+  vertical-align: middle;
+}
+
+/* Text */
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+
+.font-sm {
+  font-size: 12px;
+}
+
+.break-word {
+  overflow-wrap: break-word;
+}
+
+.doc-name-ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 150px;
+}
+
+/* Color */
+//Colors
+.color-primary {
+  color: $dark-primary;
+}
+
+.color-sec {
+  color: $dark-secondary;
+}
+
+//Borders
+
+
+//Height
+
+/* Media */
+@media (max-width: 960px) {
+  .d-bl-fl {
+    display: block;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 720px) {
+  .row-1-1-2,
+  .row-1-2-1,
+  .row-3-1,
+  .row-1-1-1,
+  .row-1x4,
+  .row-2-2 {
+    display: block;
+  }
+}

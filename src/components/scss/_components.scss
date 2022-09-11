@@ -1,0 +1,24 @@
+.app-header{
+    background-color: $dark-background;
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.20);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.app-header__nav{
+    ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        li{
+            font-family: $primary-font;
+            font-size: 0.9rem;
+            list-style: none;
+            margin-left: 3rem;
+        }
+    }
+}
