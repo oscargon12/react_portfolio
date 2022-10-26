@@ -13,7 +13,7 @@ function App() {
     <>
 
       <NavBar link1="My work" link2="About" link3="Tools" link4="Contact" />
-      <ItemListContainer/>
+      <ItemListContainer greetting="Holaaaa"/>
       
     </>
   )
