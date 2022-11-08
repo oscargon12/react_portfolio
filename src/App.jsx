@@ -1,4 +1,5 @@
 import { Fragment, useState } from 'react'
+import './firebase'
 import reactLogo from './assets/react.svg'
 import './App.css'
 import './components/scss/main.scss'
