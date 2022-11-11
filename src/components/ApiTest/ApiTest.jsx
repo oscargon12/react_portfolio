@@ -3,15 +3,27 @@ import React, { useEffect, useState } from 'react'
 export const ApiTest = () => {
 
   const [pokemon, setPokemon] = useState(null) //Establece el estado de pokemon en null
-  console.log(pokemon)
+  const [id, setId] = useState(1)
+
+  const handlePrev = () => {
+    id > 1 && setId ( id - 1 )
+  }
+  
+  const handleNext = () => {
+    setId ( id + 1 )
+  }
 
   useEffect(() => {
-    fetch('https://pokeapi.co/api/v2/pokemon/16')
+    
+    fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
         .then((res) => res.json()) ////Captura o que pasa cuando se cumple la promesa
         .then((data) => {
-            setPokemon(data)
+            setPokemon({
+              name: data.name,
+              img: data.sprites.front_default
+            })
         })
-  }, [])
+  }, [id]) //Dependencia del state de id
 
   return (
     <div>
@@ -21,11 +33,18 @@ export const ApiTest = () => {
          //Operador && : Es una sola condicion (sin else)
             <>
                 <h3>{pokemon.name}</h3>
-                <h4>{pokemon.weight}</h4>
-                <img src={pokemon.sprites.front_default} alt="{pokemon.name}" />
+                 <img src={pokemon.img} alt={pokemon.name}/>
             </>
-
         }
+
+        <section className='d-flex'>
+          <button onClick={handlePrev} disabled={id == 1}>
+            Anterior
+          </button>
+          <button onClick={handleNext}>
+            Siguiente
+          </button>
+        </section>
     </div>
   )
 }

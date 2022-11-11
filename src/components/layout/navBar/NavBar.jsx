@@ -1,9 +1,10 @@
 import { FaBars, FaTimes } from "react-icons/fa";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 
 const NavBar = ( props ) =>{
 
-    const {link1, link2, link3, link4} = props;
+    const {link1, link2, link3, link4, link5} = props;
 
     const navRef = useRef();
 
@@ -15,10 +16,11 @@ const NavBar = ( props ) =>{
 		<header>
 			<h3 className="primary-font fw-500">oscar<span className="color-sec">Gonzalez</span>~</h3>
 			<nav ref={navRef} className="primary-font">
-				<a href="/#">{link1}</a>
-				<a href="/#">{link2}</a>
-				<a href="/#">{link3}</a>
-				<a href="/#">{link4}</a>
+				<Link>{link1}</Link>
+				<Link>{link2}</Link>
+				<Link>{link3}</Link>
+				<Link>{link4}</Link>
+				<Link to="/poke">{link5}</Link>
 				
 				<button
 					className="nav-btn nav-close-btn"
