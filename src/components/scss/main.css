@@ -346,7 +346,7 @@
 
 /* Font */
 .primary-font {
-  font-family: "Source Code Pro", monospace;
+  font-family: "Source Code Pro", monospace !important;
 }
 
 .align-left {

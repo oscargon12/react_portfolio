@@ -8,6 +8,7 @@ import NavBar from './components/layout/navBar/NavBar'
 import { Hero } from './components/HeroSection/Hero'
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer'
 import { ApiTest } from './components/ApiTest/ApiTest'
+import { NotFoundPage } from './components/NotFoundPage/NotFoundPage'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,6 +23,7 @@ function App() {
         <Routes>
           <Route path="/" element={<ItemListContainer/>} />
           <Route path="/poke" element={<ApiTest/>} />
+          <Route path="*" element={<NotFoundPage/>} />
         </Routes>
       </BrowserRouter>
   )
