@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { getProjects } from '../../helpers/getData'
 import { ItemList } from '../ItemList/ItemList'
+import { Loader } from '../Loader/Loader'
 
 export const ItemListContainer = (props) => {
 
@@ -34,7 +35,7 @@ export const ItemListContainer = (props) => {
       {/* npm install react-icons --save */}
 
       {
-        loading ? <h3> Cargando datos... </h3>
+        loading ? <Loader/>
         //TODO: Cambiar titulo por spinner
         : <>
            <ItemList items={projects}/>

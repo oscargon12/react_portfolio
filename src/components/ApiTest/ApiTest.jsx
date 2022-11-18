@@ -6,7 +6,7 @@ export const ApiTest = () => {
   const [id, setId] = useState(1)
 
   const handlePrev = () => {
-    id > 1 && setId ( id - 1 )
+    id > 1 && setId ( id - 1 ) //validacion logica
   }
   
   const handleNext = () => {
@@ -25,6 +25,12 @@ export const ApiTest = () => {
         })
   }, [id]) //Dependencia del state de id
 
+  const btnPrevConfig = { //Esto puedo sacarlo a otra funcion: clase 11 > 1:15
+    onClick: handlePrev,
+    disabled: id === 1,
+    className: id === 1 ? "color-primary" : "color-sec" 
+  }
+
   return (
     <div>
         <h2>PokeApi</h2>
@@ -38,7 +44,7 @@ export const ApiTest = () => {
         }
 
         <section className='d-flex'>
-          <button onClick={handlePrev} disabled={id == 1}>
+          <button {...btnPrevConfig}>
             Anterior
           </button>
           <button onClick={handleNext}>
