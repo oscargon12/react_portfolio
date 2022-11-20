@@ -1,5 +1,4 @@
 import { Fragment, useState } from 'react'
-import './firebase'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import reactLogo from './assets/react.svg'
 import './App.css'

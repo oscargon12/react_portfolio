@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { getProjects } from '../../helpers/getData'
 import { ItemList } from '../ItemList/ItemList'
 import { Loader } from '../Loader/Loader'
+import { collection, doc, getDocs } from 'firebase/firestore/lite'
+import { db } from '../../firebase/config'
 
 export const ItemListContainer = (props) => {
 
@@ -13,18 +15,22 @@ export const ItemListContainer = (props) => {
   useEffect(() => {
 
     setLoading(true)
-    getProjects()
-      .then((resp) => {
-        setProjects(resp)
-      })
-      .catch((error) => {
-        console.log(error);
-      })
-      .finally(() => {
-        setLoading(false)
-        console.log('llamado finalizado')
-      })
+    
+    //1. armar referencia a la coleccion
+    const projectsRef = collection(db, 'projects')
 
+    //2. GET a esa ref
+    getDocs(projectsRef)
+      .then((collection) => {
+        const items = collection.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data()
+        }))
+        setProjects(items)
+      })
+      .finally(() => [
+        setLoading(false)
+      ])
   }, [])
 
   const {greetting} = props

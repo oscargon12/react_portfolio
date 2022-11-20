@@ -6,6 +6,7 @@ export const projects = [
       tools: ['bootstrap', 'Vanilla JS'],
       link: 'https//project1.com',
       github: 'https//project1.com',
+      likes: 0,
     },
     {
       id: 2,
@@ -14,6 +15,7 @@ export const projects = [
       tools: ['bootstrap', 'Angular JS', 'Mongo DB', 'Express', 'Node'],
       link: 'https//project1.com',
       github: 'https//project1.com',
+      likes: 0,
     },
     {
       id: 3,
@@ -22,5 +24,9 @@ export const projects = [
       tools: ['bootstrap', 'React', 'Firebase'],
       link: 'https//project1.com',
       github: 'https//project1.com',
+      likes: 0,
     },
+
+    // Labs //(videogames and robots)
+    //Bio
   ]
