@@ -4,8 +4,7 @@ import reactLogo from './assets/react.svg'
 import './App.css'
 import './components/scss/main.scss'
 import NavBar from './components/layout/navBar/NavBar'
-import { Hero } from './components/HeroSection/Hero'
-import { ItemListContainer } from './components/ItemListContainer/ItemListContainer'
+import { Main } from './components/Main/Main'
 import { ApiTest } from './components/ApiTest/ApiTest'
 import { NotFoundPage } from './components/NotFoundPage/NotFoundPage'
 
@@ -20,7 +19,7 @@ function App() {
         <ApiTest/> */}
 
         <Routes>
-          <Route path="/" element={<ItemListContainer/>} />
+          <Route path="/" element={<Main/>} />
           <Route path="/poke" element={<ApiTest/>} />
           <Route path="*" element={<NotFoundPage/>} />
         </Routes>
