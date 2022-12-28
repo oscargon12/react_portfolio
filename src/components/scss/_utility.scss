@@ -113,6 +113,11 @@
   display: flex;
 }
 
+//Size
+.w-100{
+  width: 100%;
+}
+
 /* Grid */
 .row-1-1-2 {
   display: grid;
@@ -174,6 +179,19 @@ $font-weights: 300 400 500 600 700;
   .fw-#{$font} {
     font-weight: $font;
   }
+}
+
+//Color
+.txt-primary{
+  color: $dark-primary;
+}
+
+.txt-secondary{
+  color: $dark-secondary;
+}
+
+.icon-r{
+  font-size: 24px;
 }
 
 .icon-xs {
