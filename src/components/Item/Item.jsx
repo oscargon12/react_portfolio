@@ -3,12 +3,9 @@ import React from 'react'
 export const Item = ({proj}) => {
   return (
     <article className='primary-font project-card' key={proj.id}>
-      <h4>{proj.name}</h4>
-      <p>{proj.desc}</p>
-      <h5>{proj.likes}</h5>
 
       <div className='thumbnails'>
-        <img src="https://cdna.artstation.com/p/assets/images/images/017/387/624/large/melissa-myra-nocturnal.jpg?1555772159" alt="photo" />
+        <img src="https://firebasestorage.googleapis.com/v0/b/clase-firebase-1d1eb.appspot.com/o/tern_surge.jpg?alt=media&token=0c77229b-6a65-45ca-80ed-515c01a9ac7e" alt="photo" />
         <div className='overlay'></div>
         <div className='title'>{proj.name}</div>
         <div className='pr-info p1'>
