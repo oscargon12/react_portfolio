@@ -54,8 +54,8 @@ nav {
 	position: relative;
 	overflow: hidden;
 	transition: transform .3s;
-
-	img {
+	
+	img{
 		width: 100%;
 		object-fit: cover;
 		object-position: 50% 20%;
@@ -93,6 +93,11 @@ nav {
 
 	.pr-desc{
 		font-size: 1rem;
+	}
+
+	.pr-tools{
+		//background-color: #fff;
+		font-size: 0.8rem;
 	}
 }
   
